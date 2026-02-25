@@ -1,68 +1,222 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color-scheme: dark;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  background: #282c34;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.appShell {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.mainContent {
+  flex: 1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.container {
+max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 16px 28px; /* mniej u góry, normalnie na dole */
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.topBanner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 14px 0 10px;  /* odstępy góra/dół */
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.topBannerImg {
+width: 100%;
+  max-width: 800px;   /* maks. szerokość na dużych ekranach */
+  max-height: px;  /* <- kluczowe: wysokość bannera */
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 22px;
+  align-items: center;
+}
+
+.heroText {
+  margin: 0 0 16px;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.5;
+}
+
+.heroIntro {
+  text-align: center;
+}
+
+.heroIntro p {
+  margin: 0 auto;
+  max-width: 72ch;               /* żeby nie był zbyt szeroki */
+  font-size: clamp(16px, 1.3vw, 20px); /* większy i responsywny */
+  line-height: 1.7;
+  color: rgba(255,255,255,0.80);
+}
+
+.heroActions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-decoration: none;
+  color: white;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.btn.primary {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.heroImage .imageMock {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  display: grid;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* CARDS */
+.cards {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.card {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.card h3 {
+  margin: 0 0 8px;
+}
+
+.card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+/* ===== Zarząd ===== */
+
+.boardList {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.boardGrid {
+  display: grid;
+  grid-template-columns: 220px 1fr; /* zdjęcie | opis */
+  grid-template-rows: auto 1fr;     /* rola | content */
+  gap: 16px;
+  align-items: center;
+}
+
+.boardRole {
+  grid-column: 1 / -1; /* rola na całą szerokość */
+  margin: 0 0 6px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.boardPhotoWrap {
+  grid-row: 2;
+  grid-column: 1;
+  width: 220px;
+  aspect-ratio: 1 / 1;
+  border-radius: 16px; /* zaokrąglone rogi */
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.boardPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.boardText {
+  grid-row: 2;
+  grid-column: 2;
+  align-self: center;
+}
+
+.boardName {
+  font-weight: 800;
+  font-size: 18px;
+  margin: 0;
+}
+
+.boardText p {
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.5;
+}
+
+/* Mobile: wszystko pod sobą */
+@media (max-width: 700px) {
+  .boardGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
   }
-  a:hover {
-    color: #747bff;
+
+  .boardRole {
+    grid-column: 1;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .boardPhotoWrap {
+    grid-column: 1;
+    grid-row: 2;
+    width: 160px;
+    margin: 0 auto; /* wyśrodkuj zdjęcie */
+  }
+
+  .boardText {
+    grid-column: 1;
+    grid-row: 3;
+    text-align: center;
+  }
+}
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .cards {
+    grid-template-columns: 1fr;
   }
 }
