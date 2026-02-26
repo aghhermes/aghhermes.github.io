@@ -9,9 +9,9 @@ export default function Footer() {
         </div>
 
         <div className="socials">
-          {/* Podmień linki na właściwe */}
-          <a href="https://github.com/aghhermes" target="_blank" rel="noreferrer">
-            GitHub
+          {}
+          <a href="https://www.youtube.com/@AGH_Hermes" target="_blank" rel="noreferrer">
+            Youtube
           </a>
           <a href="https://www.instagram.com/agh_hermes/" target="_blank" rel="noreferrer">
             Instagram

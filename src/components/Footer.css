@@ -1,7 +1,7 @@
 .footer {
   margin-top: 40px;
-  background:  #282c34;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background:  var(--bar);
+  border-top: 1px solid var(--border);
 }
 
 .footerInner {
@@ -16,12 +16,12 @@
 }
 
 .footerTitle {
-  color: white;
+  color: var(--text);
   font-weight: 800;
 }
 
 .footerSub {
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--text);
   font-size: 14px;
   margin-top: 4px;
 }
@@ -33,14 +33,13 @@
 }
 
 .socials a {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--text);
   text-decoration: none;
   padding: 8px 10px;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--border);
 }
 
 .socials a:hover {
-  color: white;
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--hover);
 }

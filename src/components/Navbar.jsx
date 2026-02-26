@@ -1,11 +1,14 @@
 import { NavLink } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import "./Navbar.css";
+import { useTheme } from "../hooks/useTheme";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [groupsOpen, setGroupsOpen] = useState(false);
   const groupsRef = useRef(null);
+  const { theme, toggle } = useTheme();
+  const isDark = theme === "dark";
 
   useEffect(() => {
     const onClick = (e) => {
@@ -26,7 +29,8 @@ export default function Navbar() {
     <header className="navHeader">
       <div className="navInner">
         <NavLink to="/" className="brand" onClick={closeAll}>
-          <img className="brandLogo" src="/logo.png" alt="AGH Hermes" />
+          <img className="brandLogo logoLight" src="/logo_lm.png" alt="AGH Hermes" />
+          <img className="brandLogo logoDark" src="/logo_dm.png" alt="AGH Hermes" />
         </NavLink>
 
         <button
@@ -76,6 +80,20 @@ export default function Navbar() {
             Rekrutacja
           </NavLink>
         </nav>
+        <label className="themeToggle" title="Tryb jasny/ciemny">
+  <input
+    type="checkbox"
+    checked={isDark}
+    onChange={toggle}
+    aria-label="Przełącz tryb ciemny"
+  />
+  <span className="track">
+    <span className="thumb" />
+  </span>
+  <span className="themeIcon" aria-hidden="true">
+    {isDark ? "🌙" : "☀️"}
+  </span>
+</label>
       </div>
     </header>
   );
