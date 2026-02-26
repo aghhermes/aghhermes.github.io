@@ -143,7 +143,7 @@ body.theme-dark .logoDark { display: block; }
   height: 24px;
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: rgba(127, 127, 127, 0.18);
+  background: var(--bar);
   display: inline-flex;
   align-items: center;
   padding: 2px;
@@ -179,13 +179,13 @@ body.theme-dark .logoDark { display: block; }
     left: 0;
     right: 0;
     top: 57px;
-    background: #0b1220;
+    background: var(--bar);
     padding: 10px 16px 16px;
     display: none;
     flex-direction: column;
     align-items: stretch;
     gap: 8px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid var(--border);
   }
 
   .navLinks.open {

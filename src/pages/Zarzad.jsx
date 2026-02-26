@@ -2,19 +2,19 @@ export default function Zarzad() {
   const people = [
     {
       role: "Przewodniczący",
-      name: "Imię Nazwisko",
+      name: "Joe",
       text:
         "Krótki opis osoby: czym się zajmuje, w jakich projektach działa, zainteresowania.",
     },
     {
       role: "Wiceprzewodniczący",
-      name: "Imię Nazwisko",
+      name: "Maks",
       text:
         "Krótki opis osoby: np. koordynuje projekty, prowadzi spotkania, ogarnia organizację.",
     },
     {
       role: "Sekretarz",
-      name: "Imię Nazwisko",
+      name: "Daniel",
       text:
         "Krótki opis osoby: np. formalności, budżet, współprace, kontakt z partnerami.",
     },
