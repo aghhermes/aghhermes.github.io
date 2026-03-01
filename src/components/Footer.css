@@ -32,6 +32,11 @@
   flex-wrap: wrap;
 }
 
+.socials.active {
+  background-color: var(--bar);
+  border-color: var(--border);
+}
+
 .socials a {
   display: inline-flex;
   color: var(--text);

@@ -113,7 +113,7 @@ useEffect(() => {
             Kontakt
           </NavLink>
 
-          <NavLink to="/rekrutacja" className="sideLink cta" onClick={closeAll}>
+          <NavLink to="/rekrutacja" className="sideLink" onClick={closeAll}>
             Rekrutacja
           </NavLink>
 
