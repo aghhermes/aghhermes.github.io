@@ -33,11 +33,19 @@
 }
 
 .socials a {
+  display: inline-flex;
   color: var(--text);
   text-decoration: none;
   padding: 8px 10px;
   border-radius: 10px;
   border: 1px solid var(--border);
+  gap: 10px;
+  white-space: nowrap;
+}
+.socials a img {
+  width: 20px;
+  height: 20px;
+  display: block;
 }
 
 .socials a:hover {

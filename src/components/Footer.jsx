@@ -10,17 +10,14 @@ export default function Footer() {
 
         <div className="socials">
           {}
-          <a href="https://www.youtube.com/@AGH_Hermes" target="_blank" rel="noreferrer">
-            Youtube
+          <a href="https://www.facebook.com/profile.php?id=61579947956744" target="_blank" rel="noreferrer">
+            <img class="smLogo" src="/fb_logo.png" /> Facebook
           </a>
           <a href="https://www.instagram.com/agh_hermes/" target="_blank" rel="noreferrer">
-            Instagram
+            <img class="smLogo" src="/ig_logo.png" /> Instagram
           </a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
-            LinkedIn
-          </a>
-          <a href="https://www.facebook.com/profile.php?id=61579947956744" target="_blank" rel="noreferrer">
-            Facebook
+          <a href="https://www.youtube.com/@AGH_Hermes" target="_blank" rel="noreferrer">
+            <img class="smLogo" src="/yt_logo.png" /> Youtube
           </a>
         </div>
       </div>

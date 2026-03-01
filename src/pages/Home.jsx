@@ -1,6 +1,11 @@
 export default function Home() {
   return (
     <section className="container">
+        <div className=" heroTitle hero heroText">
+          <h1>
+            O nas
+          </h1>
+        </div>
         <div className="topBanner">
             <img className="topBannerImg" src="/banner.png" alt="AGH Hermes" />
         </div>
@@ -8,7 +13,13 @@ export default function Home() {
         <div className="heroText heroIntro">
         <div>
           <p>
-            AGH Hermes, to koło naukowe stworzone przez studentów z Wydziału Informatyki Elektroniki i Telekomunikacji Akademii Górniczo-Huitniczej, które zrzesza studentów chcących rozwijać swoją wiedzę w dziedzinach takich jak: Embedded systems, zaawansowane przetwarzanie sygnałów, techniki lokalizacji, bezpieczeństwo informatyczne systemów moblinych oraz algorytmiki sterowania napędami i elektroniki mocy w kontekście systemów moblinych.
+            AGH Hermes - koło naukowe Wydziału Informatyki Elektroniki i Telekomunikacji Akademii Górniczo-Hutniczej, zajmujące się: 
+            <br />- Embedded systems
+            <br />- Zaawansowanym przetwarzaniem sygnałów
+            <br />- Technikami lokalizacji
+            <br />- Bezpieczeństwem informatycznym systemów moblinych
+            <br />- Elektroniką mocy w kontekście systemów moblinych
+            <br />- Algorytmikami sterowania napędami
           </p>
         </div>
       </div>

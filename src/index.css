@@ -83,7 +83,7 @@ width: 100%;
 }
 
 .heroIntro {
-  text-align: center;
+  text-align: left;
   color: var(--text);
 }
 
@@ -243,5 +243,11 @@ width: 100%;
   }
   .cards {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .mainContent {
+    padding-top: 64px; /* miejsce na przycisk/logo */
   }
 }
