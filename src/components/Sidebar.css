@@ -218,3 +218,8 @@
 @media (min-width: 900px) {
   .sidebarOverlay { display: none; }
 }
+@media (hover: none), (pointer: coarse) {
+    .edgeHotZone {
+        display: none;
+    }
+}
