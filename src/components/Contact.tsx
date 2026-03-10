@@ -25,8 +25,8 @@ export default function Contact() {
               </p>
 
               <div className={styles.contactActions}>
-                <a href="mailto:hermes@agh.edu.pl" className="btn-primary">
-                  <span>✉ Napisz do nas</span>
+                <a href="https://forms.gle/5tfCR9hXJ73t2K2D6" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                  <span>📝 Formularz rekrutacyjny</span>
                 </a>
               </div>
 
@@ -39,7 +39,7 @@ export default function Contact() {
                 </div>
                 <div className={styles.contactInfoItem}>
                   <span>✉</span>
-                  <span>hermes@agh.edu.pl</span>
+                  <span>TBA</span>
                 </div>
               </div>
             </div>
