@@ -19,7 +19,7 @@ const TEAMS = [
     icon: "📊",
     name: "Marketing",
     description:
-      "Promujemy nasze projekty i budujemy społeczność wokół koła naukowego. Organizujemy wydarzenia, tworzymy materiały promocyjne i dbamy o obecność AGH&nbsp;HERMES w mediach społecznościowych.",
+      "Promujemy nasze projekty i budujemy społeczność wokół koła naukowego. Organizujemy wydarzenia, tworzymy materiały promocyjne i dbamy o obecność AGH HERMES w mediach społecznościowych.",
     tags: ["Youtube", "Facebook", "Instagram"],
   },
 ];

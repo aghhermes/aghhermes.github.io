@@ -15,7 +15,7 @@ export default function Footer() {
               <span className={styles.footerBrandName}>AGH HERMES</span>
             </div>
             <p className={styles.footerDescription}>
-              Koło Naukowe przy Akademii Górniczo-Hutniczej im. Stanisława
+              Koło Naukowe na Akademii Górniczo-Hutniczej im. Stanisława
               Staszica w Krakowie. Integracja systemów, przetwarzanie sygnałów
               cyfrowych i telemetria.
             </p>
