@@ -1,0 +1,177 @@
+.teams {
+  background: var(--color-bg-secondary);
+  position: relative;
+}
+
+.teams::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--color-border-strong) 50%,
+    transparent 100%);
+}
+
+.teamsHeader {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.teamsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.teamCard {
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.teamCard::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-slow);
+}
+
+.teamCard:hover::after {
+  transform: scaleX(1);
+}
+
+.teamIconRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.teamIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background: rgba(92, 198, 208, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.teamName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.teamDescription {
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.teamTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.teamTag {
+  padding: 3px 10px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--color-accent);
+  background: rgba(92, 198, 208, 0.06);
+  border: 1px solid rgba(92, 198, 208, 0.12);
+  border-radius: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Projects sub-section */
+.projectsHeader {
+  text-align: center;
+  margin: 72px 0 40px;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.projectCard {
+  padding: 24px;
+}
+
+.projectStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+  padding: 3px 10px;
+  border-radius: 16px;
+}
+
+.statusActive {
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.08);
+  border: 1px solid rgba(74, 222, 128, 0.15);
+}
+
+.statusCompleted {
+  color: var(--color-accent);
+  background: rgba(92, 198, 208, 0.08);
+  border: 1px solid rgba(92, 198, 208, 0.15);
+}
+
+.statusPlanned {
+  color: #facc15;
+  background: rgba(250, 204, 21, 0.08);
+  border: 1px solid rgba(250, 204, 21, 0.15);
+}
+
+.projectTitle {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+
+.projectDescription {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 960px) {
+  .teamsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .teamsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,143 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Subtle ambient background — no flashy gradients */
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(92, 198, 208, 0.06) 0%, transparent 60%);
+  z-index: 0;
+}
+
+/* Grid pattern overlay */
+.heroGrid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(92, 198, 208, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(92, 198, 208, 0.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 24px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.heroLogoWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+
+.heroLogo {
+  max-width: 720px;
+  width: 100%;
+  height: auto;
+}
+
+.heroTagline {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-secondary);
+  margin-bottom: 12px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.heroTitle {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--color-text-primary);
+}
+
+.heroDescription {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  color: var(--color-text-secondary);
+  max-width: 580px;
+  margin: 0 auto 40px;
+  line-height: 1.8;
+}
+
+.heroActions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Scroll indicator */
+.scrollIndicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  animation: fadeIn 1s ease-out 1s both;
+}
+
+.scrollDot {
+  width: 20px;
+  height: 32px;
+  border: 2px solid var(--color-border-strong);
+  border-radius: 10px;
+  position: relative;
+}
+
+.scrollDot::after {
+  content: '';
+  width: 4px;
+  height: 8px;
+  background: var(--color-accent);
+  border-radius: 2px;
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+
+@keyframes scrollBounce {
+  0%, 100% { top: 4px; opacity: 1; }
+  50% { top: 16px; opacity: 0.3; }
+}
+
+@media (max-width: 768px) {
+  .heroContent {
+    padding: 0 20px;
+  }
+  .scrollIndicator {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroContent {
+    padding: 0 16px;
+  }
+  .heroActions {
+    flex-direction: column;
+    align-items: center;
+  }
+}

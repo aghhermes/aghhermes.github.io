@@ -1,0 +1,131 @@
+.about {
+  background: var(--color-bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--color-border-strong) 50%,
+    transparent 100%);
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.aboutText {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.aboutDescription {
+  margin-bottom: 32px;
+}
+
+.aboutHighlights {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  background: rgba(92, 198, 208, 0.03);
+  border: 1px solid transparent;
+  transition: all var(--transition-base);
+}
+
+.highlight:hover {
+  border-color: var(--color-border);
+  background: rgba(92, 198, 208, 0.06);
+}
+
+.highlightIcon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  background: rgba(92, 198, 208, 0.08);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.highlightContent h4 {
+  color: var(--color-text-primary);
+  margin-bottom: 2px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.highlightContent p {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.aboutCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.aboutCard {
+  padding: 28px 20px;
+  text-align: center;
+}
+
+.aboutCardNumber {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 4px;
+}
+
+.aboutCardLabel {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+@media (max-width: 960px) {
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .aboutCards {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .aboutCard {
+    padding: 20px 16px;
+  }
+  .aboutCardNumber {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .aboutCards {
+    grid-template-columns: 1fr;
+  }
+}

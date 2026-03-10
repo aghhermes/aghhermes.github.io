@@ -1,0 +1,77 @@
+.heroLogoSvg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 10px rgba(92, 198, 208, 0.15));
+  color: #dfe4eb; /* Ensures currentColor resolves to off-white text for dark background */
+}
+
+/* Initial state: animate strokes, fill transparent */
+.darkPath, .cyanPath {
+  stroke-dasharray: 4000;
+  stroke-dashoffset: 4000;
+  fill: transparent;
+  stroke-width: 2.5px;
+}
+
+.noFillPath {
+  fill: none;
+  stroke: none;
+}
+
+.darkPath {
+  stroke: currentColor;
+  animation: 
+    drawStroke 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards,
+    fillDark 0.6s ease-in-out forwards;
+}
+
+.cyanPath {
+  stroke: #1acff1;
+  animation: 
+    drawStroke 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards,
+    fillCyan 0.6s ease-in-out forwards;
+}
+
+/* Dynamic staggering delay using nth-child for all 22 parts of the logo */
+/* format: animation-delay: drawStrokeDelay, fillDelay */
+.logoGroup path:nth-child(1) { animation-delay: 0.00s, 0.80s; }
+.logoGroup path:nth-child(2) { animation-delay: 0.03s, 0.83s; }
+.logoGroup path:nth-child(3) { animation-delay: 0.06s, 0.86s; }
+.logoGroup path:nth-child(4) { animation-delay: 0.09s, 0.89s; }
+.logoGroup path:nth-child(5) { animation-delay: 0.12s, 0.92s; }
+.logoGroup path:nth-child(6) { animation-delay: 0.15s, 0.95s; }
+.logoGroup path:nth-child(7) { animation-delay: 0.18s, 0.98s; }
+.logoGroup path:nth-child(8) { animation-delay: 0.21s, 1.01s; }
+.logoGroup path:nth-child(9) { animation-delay: 0.24s, 1.04s; }
+.logoGroup path:nth-child(10) { animation-delay: 0.27s, 1.07s; }
+.logoGroup path:nth-child(11) { animation-delay: 0.30s, 1.10s; }
+.logoGroup path:nth-child(12) { animation-delay: 0.33s, 1.13s; }
+.logoGroup path:nth-child(13) { animation-delay: 0.36s, 1.16s; }
+.logoGroup path:nth-child(14) { animation-delay: 0.39s, 1.19s; }
+.logoGroup path:nth-child(15) { animation-delay: 0.42s, 1.22s; }
+.logoGroup path:nth-child(16) { animation-delay: 0.45s, 1.25s; }
+.logoGroup path:nth-child(17) { animation-delay: 0.48s, 1.28s; }
+.logoGroup path:nth-child(18) { animation-delay: 0.51s, 1.31s; }
+.logoGroup path:nth-child(19) { animation-delay: 0.54s, 1.34s; }
+.logoGroup path:nth-child(20) { animation-delay: 0.57s, 1.37s; }
+.logoGroup path:nth-child(21) { animation-delay: 0.60s, 1.40s; }
+.logoGroup path:nth-child(22) { animation-delay: 0.63s, 1.43s; }
+
+@keyframes drawStroke {
+  0% {
+    stroke-dashoffset: 4000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fillDark {
+  from { fill: transparent; stroke: currentColor; }
+  to { fill: currentColor; stroke: transparent; }
+}
+
+@keyframes fillCyan {
+  from { fill: transparent; stroke: #1acff1; }
+  to { fill: #1acff1; stroke: transparent; }
+}
