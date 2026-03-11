@@ -10,18 +10,18 @@ export default function Contact() {
           </span>
           <h2 className="section-title">Dołącz do AGH&nbsp;HERMES</h2>
           <p className={`section-description ${styles.contactDescription}`}>
-            Szukasz miejsca, gdzie rozwiniesz swoje umiejętności w integracji
-            systemów, przetwarzaniu sygnałów i telemetrii? Zapraszamy!
+            Chcesz budować realne systemy — od elektroniki i telemetrii po oprogramowanie?
+            W AGH HERMES rozwijamy projekty, w których teoria spotyka się z praktyką.
           </p>
 
           <div className={`glass-card ${styles.contactCard}`}>
             <div className={styles.contactInner}>
               <h3 className={styles.contactCta}>
-                Gotowy na nowe wyzwania?
+                Zacznij budować z nami!
               </h3>
               <p className={styles.contactSubtext}>
-                Napisz do nas lub odwiedź nasze social media, aby dowiedzieć się
-                więcej o najbliższych rekrutacjach i wydarzeniach.
+                Dołącz do zespołu studentów, którzy projektują i budują własne rozwiązania technologiczne.
+                Sprawdź aktualne rekrutacje lub odezwij się do nas w mediach społecznościowych.
               </p>
 
               <div className={styles.contactActions}>

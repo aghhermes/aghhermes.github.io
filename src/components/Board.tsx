@@ -5,19 +5,19 @@ const BOARD_MEMBERS = [
     name: "Joe",
     role: "Prezes",
     initials: "JK",
-    bio: "Człowiek orkiestra, koordynuje pracę koła i zajmuje się projektami w zespole elektroników. Lubi oscypki i posługuje się gwarą góralską na poziomie A1.",
+    bio: "Pilnuje, żeby projekty się spinały, a koło działało jak dobrze zorganizowany system. Najczęściej można go znaleźć przy projektach elektronicznych. Fan oscypków i ogarniacz gwary góralskiej na poziomie A1.",
   },
   {
     name: "Maks",
     role: "Wiceprezes",
     initials: "MS",
-    bio: "Pasjonat integracji systemów i telemetrii. Hobby - pizza z żabki.",
+    bio: "Interesuje się integracją systemów i telemetrią. Najchętniej łączy różne technologie w działające rozwiązania. Po godzinach regeneracja przy pizzy z żabki.",
   },
   {
     name: "Daniel",
     role: "Sekretarz",
     initials: "DF",
-    bio: "Entuzjasta sieci teleinformatycznych i vibe coding'u. Lubi pograć w gierki, głównie w cs'ka.",
+    bio: "Entuzjasta sieci komputerowych i wszystkiego, co dzieje się „pod maską” internetu. Po godzinach najczęściej można go spotkać na serwerach — tym razem w CS-ie.",
   },
 ];
 
@@ -27,10 +27,10 @@ export default function Board() {
       <div className="container">
         <div className={styles.boardHeader}>
           <span className="section-label">Zarząd</span>
-          <h2 className="section-title">Nasz Zespół Zarządzający</h2>
+          <h2 className="section-title">Nasz Zarząd</h2>
           <p className="section-description" style={{ margin: "0 auto" }}>
-            Poznaj osoby odpowiedzialne za rozwój i działalność koła naukowego
-            AGH&nbsp;HERMES.
+            Poznaj osoby odpowiedzialne za założenie, rozwój i działalność koła naukowego
+            AGH HERMES.
           </p>
         </div>
 

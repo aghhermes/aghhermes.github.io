@@ -15,9 +15,7 @@ export default function Footer() {
               <span className={styles.footerBrandName}>AGH HERMES</span>
             </div>
             <p className={styles.footerDescription}>
-              Koło Naukowe na Akademii Górniczo-Hutniczej im. Stanisława
-              Staszica w Krakowie. Integracja systemów, przetwarzanie sygnałów
-              cyfrowych i telemetria.
+              Koło naukowe działające na AGH w Krakowie. Tworzymy projekty z zakresu integracji systemów, elektroniki i telemetrii.
             </p>
           </div>
 
@@ -36,7 +34,7 @@ export default function Footer() {
           <div>
             <h4 className={styles.footerColumnTitle}>Projekty</h4>
             <div className={styles.footerLinks}>
-              <a href="#teams" className={styles.footerLink}>Aplikacja mobilna</a>
+              <a href="#teams" className={styles.footerLink}>Flota hulajnóg AGH</a>
             </div>
           </div>
 
@@ -76,7 +74,7 @@ export default function Footer() {
 
         <div className={styles.footerBottom}>
           <p className={styles.footerCopyright}>
-            © {currentYear} AGH HERMES. Wszelkie prawa zastrzeżone.
+            © {currentYear} AGH HERMES — Koło Naukowe AGH
           </p>
           <p className={styles.footerAgh}>
             Akademia Górniczo-Hutnicza im. St. Staszica w Krakowie

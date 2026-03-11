@@ -4,23 +4,23 @@ const HIGHLIGHTS = [
   {
     icon: "📡",
     title: "Przetwarzanie Sygnałów",
-    description: "Analiza i przetwarzanie sygnałów cyfrowych w czasie rzeczywistym",
+    description: "Analiza i przetwarzanie sygnałów cyfrowych w systemach czasu rzeczywistego.",
   },
   {
     icon: "🔧",
     title: "Integracja Systemów",
-    description: "Projektowanie i integracja nowoczesnych systemów pomiarowych",
+    description: "Projektowanie i łączenie nowoczesnych systemów elektronicznych oraz pomiarowych.",
   },
   {
     icon: "📊",
     title: "Telemetria",
-    description: "Zbieranie, przesyłanie i analiza danych telemetrycznych",
+    description: "Zbieranie, przesyłanie i analiza danych telemetrycznych z urządzeń i systemów.",
   },
 ];
 
 const STATS = [
   { number: "16", label: "Członków" },
-  { number: "1", label: "Projekty" },
+  { number: "1", label: "Projekt" },
   { number: "2025", label: "Rok założenia" },
   { number: "3", label: "Zespoły" },
 ];
@@ -33,14 +33,10 @@ export default function About() {
           <div className={styles.aboutText}>
             <span className="section-label">O nas</span>
             <h2 className="section-title">
-              Poznaj Koło Naukowe AGH&nbsp;HERMES
+              Poznaj AGH&nbsp;HERMES
             </h2>
             <p className={`section-description ${styles.aboutDescription}`}>
-              AGH HERMES to koło naukowe działające na Akademii
-              Górniczo-Hutniczej w Krakowie. Skupiamy studentów pasjonujących
-              się integracją nowoczesnych systemów, przetwarzaniem sygnałów
-              cyfrowych i telemetrią. Realizujemy projekty łączące teorię
-              z&nbsp;praktyką inżynierską.
+              AGH HERMES to koło naukowe działające na Akademii Górniczo-Hutniczej w Krakowie. Tworzymy projekty z zakresu integracji systemów, przetwarzania sygnałów i telemetrii, łącząc teorię z praktyką inżynierską.
             </p>
 
             <div className={styles.aboutHighlights}>

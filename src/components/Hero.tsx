@@ -18,10 +18,7 @@ export default function Hero() {
           Systemy, Sygnały &amp; Telemetria
         </h1>
         <p className={styles.heroDescription}>
-          Jesteśmy zespołem studentów Akademii Górniczo-Hutniczej w Krakowie,
-          którzy łączą pasję do technologii z praktycznym podejściem do
-          integracji nowoczesnych systemów, przetwarzania sygnałów cyfrowych
-          i&nbsp;telemetrii.
+          Jesteśmy zespołem studentów AGH, którzy projektują i budują systemy elektroniczne, rozwiązania telemetryczne oraz technologie przetwarzania sygnałów. Łączymy teorię z praktyką, tworząc realne projekty technologiczne.
         </p>
 
         <div className={styles.heroActions}>

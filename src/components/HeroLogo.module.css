@@ -3,6 +3,8 @@
   height: 100%;
   filter: drop-shadow(0 0 10px rgba(92, 198, 208, 0.15));
   color: #dfe4eb; /* Ensures currentColor resolves to off-white text for dark background */
+  /* Cyberpunk glitch starts after initial draw/fill (approx 2.1s total max) */
+  animation: cyberpunkGlitch 6s infinite 2.5s;
 }
 
 /* Initial state: animate strokes, fill transparent */
@@ -75,3 +77,62 @@
   from { fill: transparent; stroke: #1acff1; }
   to { fill: #1acff1; stroke: transparent; }
 }
+
+@keyframes cyberpunkGlitch {
+  0%, 100% {
+    transform: translate(0) scale(1) skew(0deg);
+    filter: drop-shadow(0 0 10px rgba(92, 198, 208, 0.15));
+  }
+  /* Chromatic Glitch 1 */
+  2% {
+    transform: translate(-3px, 1px) skew(1deg);
+    filter: drop-shadow(-3px 0 0 rgba(255, 0, 85, 0.8)) drop-shadow(3px 0 0 rgba(26, 207, 241, 0.8));
+  }
+  4% {
+    transform: translate(3px, -1px) skew(-1deg);
+    filter: drop-shadow(3px 0 0 rgba(255, 0, 85, 0.8)) drop-shadow(-3px 0 0 rgba(26, 207, 241, 0.8));
+  }
+  6% {
+    transform: translate(0) skew(0deg);
+    filter: drop-shadow(0 0 10px rgba(92, 198, 208, 0.15));
+  }
+  /* Neon Flicker */
+  50% {
+    filter: drop-shadow(0 0 10px rgba(92, 198, 208, 0.15));
+    opacity: 1;
+  }
+  50.5% {
+    filter: drop-shadow(0 0 20px rgba(26, 207, 241, 0.5));
+    opacity: 0.8;
+  }
+  51% {
+    filter: drop-shadow(0 0 10px rgba(92, 198, 208, 0.15));
+    opacity: 1;
+  }
+  51.5% {
+    filter: drop-shadow(0 0 25px rgba(26, 207, 241, 0.6));
+    opacity: 0.9;
+  }
+  52% {
+    filter: drop-shadow(0 0 10px rgba(92, 198, 208, 0.15));
+    opacity: 1;
+  }
+  /* Glitch 2 */
+  75% {
+    transform: translate(0) skew(0deg);
+    filter: drop-shadow(0 0 10px rgba(92, 198, 208, 0.15));
+  }
+  76% {
+    transform: translate(1px, 2px) skew(2deg);
+    filter: drop-shadow(-2px 0 0 rgba(26, 207, 241, 0.9));
+  }
+  77% {
+    transform: translate(-2px, -1px) skew(-2deg);
+    filter: drop-shadow(2px 0 0 rgba(255, 0, 85, 0.9));
+  }
+  78% {
+    transform: translate(0) skew(0deg);
+    filter: drop-shadow(0 0 10px rgba(92, 198, 208, 0.15));
+  }
+}
+
