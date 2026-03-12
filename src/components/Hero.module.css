@@ -33,6 +33,7 @@
   text-align: center;
   max-width: 800px;
   padding: 0 24px;
+  padding-bottom: 100px;
   animation: fadeInUp 0.8s ease-out;
 }
 
@@ -119,14 +120,24 @@
 }
 
 @keyframes scrollBounce {
-  0%, 100% { top: 4px; opacity: 1; }
-  50% { top: 16px; opacity: 0.3; }
+
+  0%,
+  100% {
+    top: 4px;
+    opacity: 1;
+  }
+
+  50% {
+    top: 16px;
+    opacity: 0.3;
+  }
 }
 
 @media (max-width: 768px) {
   .heroContent {
     padding: 0 20px;
   }
+
   .scrollIndicator {
     display: none;
   }
@@ -136,6 +147,7 @@
   .heroContent {
     padding: 0 16px;
   }
+
   .heroActions {
     flex-direction: column;
     align-items: center;
